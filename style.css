@@ -1,0 +1,81 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+h1,button{
+    font-family: Ubuntu;
+}
+h1{
+    padding-top: 15px;
+    
+}
+.header{
+    background-color: rgba(147, 18, 121, 0.734);
+    
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    
+    color: whitesmoke;
+}
+.container{
+    
+    
+    background-color: rgba(55, 235, 127, 0.405);
+    
+    height: 85vh;
+    width: 100%;
+}
+.box{
+    padding: 54px 10px 10px 10px;
+    display: flex ;
+    flex-direction: column;
+}
+
+.form{
+    display: flex ;
+    flex-direction: column;
+}
+.boxItem{
+    margin: 15px auto 15px auto;
+}
+
+span{
+    color: rgb(5, 108, 15);
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+.inputName{
+    
+   
+    text-align: center;
+    font-size: 25px;
+    border: 3px solid rgb(221, 25, 57);
+    border-radius: 60px;
+    
+}
+.loveScore{
+    
+    
+    text-align: center;
+    font-size: 25px;
+    border: 3px solid rgb(5, 137, 44);
+    border-radius: 60px;
+    
+}
+
+button{
+    color: white;
+    background-color: rgb(78, 195, 78);
+    padding: 10px 20px ;
+    border: 3px solid rgb(40, 238, 5);
+    font-size: 25px;
+    
+    border-radius: 30%;
+
+}
+
+button:hover{
+    cursor: pointer;
+}
