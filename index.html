@@ -1,107 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
- <title>Love Calculator</title>
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-
-<style >
-    
- body{
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  position: relative;
- }
- header{
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
- }
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="header">
+    <h1>Love Calculator</h1>
+  </div>
+  <div class="container">
+    <div class="box">
 
-<header >
- 
-<div class="card w-50  text-center ">
-  <div class="card-header bg-danger text-white">LOVE CALCULATOR</div>
-  <div class="card-body">
-   <form class="form-inline w-75 m-auto">
-    <div class="form-group">
-     <input type="text" name="" class="form-control text-center" placeholder="Your Name" id="name" >
+      <form action="">
+        <div class="form">
+        <input class="inputName boxItem" name="" type="text" id="name" placeholder="Enter Your Name">
+        <span class="boxItem">+</span>
+        <input class="inputName boxItem" name="" type="text" id="lname" placeholder="Your Partner Name">
     </div>
-    <div class="pl-4 pr-4" style="margin: 0 auto;">
-     <p > + </p>
-    </div>
-    <div class="form-group">
-     <input type="text" name="" class="form-control text-center" placeholder=" Love Name" id="lname">
-    </div>
-   </form> <br>
-    <div class="w-70 m-auto">
-     <button  class="btn btn-success w-50" onclick="checkloveper()"> click </button>
-    </div>
-    <br>
-    <div>
-     <input type="text" name="" placeholder="LOVE PERCENTAGE" class="form-control text-center   m-auto" id="lovevalue">
-    </div>
-  </div> 
-  <div class="card-footer ">God Bless Your RelationShip</div>
-</div>
+    </form>
 
-</header>
-
-<script>
- function checkloveper(){
-
-  var name = document.getElementById('name').value;
-  var lname = document.getElementById('lname').value;
-
-  if(name == ""){
-   alert('Please enter your name');
-  }else if (name.length <=2 ) {
-   alert('Min lenght is 3')
-  }else if(!isNaN(name)){
-   alert('Numbers are not allowed');
-  }
-
-  else if(lname == ""){
-   alert('Please enter your love name');
-  }else if (lname.length <=2 ) {
-   alert('Min lenght is 3')
-  }else if(!isNaN(lname)){
-   alert('Numbers are not allowed');
-  }
-  else{
-  var lovdata = Math.random() * 100;
-  
-  if (
-      (name =="Satyam" && lname =="Archana")||
-      (name =="satyam" && lname =="archana")||
-      (name =="archana" && lname =="satyam")||
-      (name =="Archana" && lname =="Satyam")||
-      (name =="archana" && lname =="Satyam")||
-      (name =="Archana" && lname =="satyam")||
-      (name =="Satyam" && lname =="Archana")||
-      (name =="satyam" && lname =="archana")||
-      (name =="Satyam" && lname =="archana")||
-      (name =="satyam" && lname =="Archana")
-      ) {
-      lovdata = 100;
-      
-  } else {
-    lovdata = Math.floor(lovdata);
-  }
-  document.getElementById('lovevalue').value = lovdata + "%"; 
-  }
-  
- }
-</script>
+    <button class="boxItem" onclick="checkloveper()">Calculate</button>
+    <input class="loveScore boxItem" name="" type="text" id="lovevalue" placeholder="Love Score(0-100)">
+  </div>
+  </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
